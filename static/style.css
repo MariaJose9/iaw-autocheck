@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+image {
+    width: 400px;
+    height: 200px;
+    align: center;
+    hspace: 5px;
+}
