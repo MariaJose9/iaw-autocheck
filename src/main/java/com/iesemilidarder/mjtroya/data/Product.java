@@ -3,7 +3,7 @@ package com.iesemilidarder.mjtroya.data;
 public abstract class Product {
     private String name;
     private Double price;
-    private ActivityType activityKind;
+    private String activityKind;
     private String company;
     private GeoTag geoTag;
 
@@ -23,11 +23,11 @@ public abstract class Product {
         this.price = price;
     }
 
-    public ActivityType getActivityKind() {
+    public String getActivityKind() {
         return activityKind;
     }
 
-    public void setActivityKind(ActivityType activityKind) {
+    public void setActivityKind(String activityKind) {
         this.activityKind = activityKind;
     }
 

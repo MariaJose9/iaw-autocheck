@@ -9,8 +9,5 @@
         <module name="iaw-autocheck" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="iaw-autocheck" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
