@@ -6,7 +6,7 @@ import java.util.List;
 public enum GeoTag {
     MALLORCA, MENORCA, IBIZA, CABRERA, FORMENTERA
 }*/
-public class GeoTag{
+public class GeoTag extends Product{
     private List<GeoTag> locality;
     private String name;
 

@@ -1,9 +1,11 @@
 package com.iesemilidarder.mjtroya.controller;
 
 import com.iesemilidarder.mjtroya.DataHelper;
-import com.iesemilidarder.mjtroya.Launcher;
-import com.iesemilidarder.mjtroya.data.*;
-import org.apache.commons.lang3.StringUtils;
+import com.iesemilidarder.mjtroya.data.Activity;
+import com.iesemilidarder.mjtroya.data.ActivityType;
+import com.iesemilidarder.mjtroya.data.GeoTag;
+import com.iesemilidarder.mjtroya.data.Product;
+import com.iesemilidarder.mjtroya.data.Restaurant;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +23,7 @@ public class ProductController {
     }
 
     @RequestMapping("/activity")
-    public Activity getActivity(@RequestParam(value = "name", defaultValue = "Hola") String activityKind) {
+    public Activity getActivity(@RequestParam(value = "name", defaultValue = "Hola Mundo") String activityKind) {
         Activity activity = new Activity();
         activity.setName(activityKind);
         DataHelper.products.add(activity);
@@ -41,13 +43,10 @@ public class ProductController {
 
     @RequestMapping("/geotag")
     public List<Product> getGeoTag(@RequestParam(value = "name", defaultValue = "") String area) {
-        /*
         GeoTag geoTag = new GeoTag();
-        geoTag.setLocality(geoTag);
+        geoTag.setName(area);
         Product aux = new Restaurant();
         DataHelper.products.add(aux);
-        return geoTag;*/
-
         return null;
     }
 
@@ -60,11 +59,11 @@ public class ProductController {
         return restaurant;
     }
 
-    @RequestMapping("/getProductTypes")
+    @RequestMapping("/getProductType")
     public List<String> getProductType() {
         List<String> data = new ArrayList<>();
         for (Product p: DataHelper.getData()) {
-            if(CollectionUtils.contains(data.iterator(),p.getActivityKind())){
+            if(!CollectionUtils.contains(data.iterator(),p.getActivityKind())){
                 data.add(p.getActivityKind());
             }
         }

@@ -2,10 +2,6 @@ package com.iesemilidarder.mjtroya;
 
 import com.iesemilidarder.mjtroya.data.Activity;
 import com.iesemilidarder.mjtroya.data.ActivityType;
-import com.iesemilidarder.mjtroya.data.Product;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Launcher {
 

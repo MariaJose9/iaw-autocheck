@@ -39,12 +39,8 @@ public abstract class Product {
         this.company = company;
     }
 
-    public GeoTag getGeoTag() {
-        return geoTag;
-    }
+    public GeoTag getGeoTag() { return geoTag; }
 
-    public void setGeoTag(GeoTag geoTag) {
-        this.geoTag = geoTag;
-    }
+    public void setGeoTag(GeoTag geoTag) { this.geoTag = geoTag; }
 }
 
